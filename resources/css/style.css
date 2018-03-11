@@ -129,6 +129,7 @@ h3 {
 #wrapper {
   position: relative;
   overflow: hidden;
+  background-color: black;
 }
 
 /* line 108, ../sass/style.scss */
@@ -275,7 +276,7 @@ h3 {
 #result {
   width: 100%;
   background: center center no-repeat;
-  background-size: cover;
+  background-size: contain;
   z-index: 2;
 }
 
@@ -312,6 +313,11 @@ h3 {
   width: 200px;
   text-align: center;
   font-size: 20px;
+}
+
+#start .btn.gallery {
+  z-index: 5;
+  position: absolute;
 }
 
 /* line 283, ../sass/style.scss */
@@ -522,13 +528,12 @@ hr.small {
   height: 700px;
   position: absolute;
   top: 50%;
-  margin-top: -350px;
   color: #fff;
   text-align: center;
   padding: 20px 50px;
   text-transform: uppercase;
   left: 50%;
-  margin-left: -225px;
+  transform: translate(-50%, -50%);
 }
 
 /* line 454, ../sass/style.scss */
@@ -723,6 +728,7 @@ hr.small {
   line-height: 50px;
   text-align: center;
   margin-right: 30px;
+  background-image: none !important;
 }
 
 /* line 624, ../sass/style.scss */
@@ -731,17 +737,19 @@ hr.small {
   color: #fff;
   font-size: 30px;
   font: normal normal normal 30px/1 FontAwesome;
+  line-height: 0.5;
 }
 
 /* line 631, ../sass/style.scss */
 .pswp__qr {
+  flex-direction: column;
   width: 500px;
-  height: 500px;
+  height: 600px;
   position: absolute;
   left: 50%;
   margin-left: -250px;
   top: 50%;
-  margin-top: -250px;
+  margin-top: -300px;
   z-index: 10000;
 }
 /* line 640, ../sass/style.scss */
@@ -842,5 +850,39 @@ hr.small {
   /* line 672, ../sass/style.scss */
   .takePic {
     bottom: auto;
+  }
+}
+
+@media (max-height: 700px) {
+  .inner {
+    height: 100%;
+  }
+
+  .inner .names {
+    /* padding: 0; */
+    margin: 0;
+  }
+
+  .takePic {
+    bottom: 10%;
+  }
+
+  .qr img {
+    max-width: 70%;
+    max-height: 100%;
+    float: left;
+  }
+
+  .qr {
+    max-height: 80%;
+    top: 50% !important;
+    margin-top: 0;
+    transform: translate(0, -50%);
+    display: flex;
+    align-items: center;
+  }
+
+  .pswp__qr {
+    flex-direction: row;
   }
 }

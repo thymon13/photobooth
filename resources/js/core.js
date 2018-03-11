@@ -359,8 +359,9 @@ var photoBooth = (function () {
             img = img.split('/').pop();
 
             $('<img>').attr('src', 'qrcode.php?filename=' + img).appendTo(pswpQR);
+            $('<p>').html(L10N.qrHelp).appendTo(pswpQR);
 
-            pswpQR.addClass('qr-active').fadeIn('fast');
+            pswpQR.addClass('qr active qr-active').fadeIn('fast');
         }
     });
     // print in gallery
@@ -767,7 +768,7 @@ var photoBooth = (function () {
                     captionEl.children[0].innerText = '';
                     return false;
                 }
-                captionEl.children[0].innerHTML = item.title + '<br/><small>Photo: ' + item.author + '</small>';
+                captionEl.children[0].innerHTML = item.title;
                 return true;
             }
 
