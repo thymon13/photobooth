@@ -1,6 +1,6 @@
 L10N = {
 	"gallery": "Galerie",
-	"startScreen": "<h1>Photobooth<\/h1><h2>Webinterface<\/h2> by Andr\u00e9 Rinas",
+	"startScreen": "<h1>Fotobox<\/h1><h2>Bitte lächeln!<\/h2>",
 	"general_start_screen_title": "Startbildschirm (Titel)",
 	"general_start_screen_subtitle": "Startbildschirm (Untertitel)",
 	"takePhoto": "Foto erstellen!",
