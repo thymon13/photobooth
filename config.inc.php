@@ -16,7 +16,7 @@ $config['use_gpio_button'] = false; // Use alt+p to take a new picture, can be t
 $config['show_fork'] = true;
 $config['previewFromCam'] = false; // experimental see https://github.com/andreknieriem/photobooth/pull/30
 $config['cups_button'] = false;
-$config['file_format_date'] = false;
+$config['file_format_date'] = true;
 $config['cntdwn_time'] = '5'; // control countdown timer
 $config['cheese_time'] = '1000'; // control time for cheeeeese!
 $config['use_filter'] = true;
@@ -49,7 +49,7 @@ $config['wedding']['symbol'] = 'fa-heart-o';
 $config['show_gallery'] = true;
 $config['newest_first'] = true;
 $config['scrollbar'] = false;
-$config['show_date'] = false; // only works if file_format_date = true
+$config['show_date'] = true; // only works if file_format_date = true
 $config['gallery']['date_format'] = 'd.m.Y - G:i';
 
 // EMAIL
