@@ -851,6 +851,13 @@ hr.small {
   .takePic {
     bottom: auto;
   }
+
+  .pswp__qr {
+    width: 70%;
+    height: auto;
+    margin-left: -150px;
+  }
+
 }
 
 @media (max-height: 700px) {
