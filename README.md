@@ -167,6 +167,10 @@ sudo crontab -e
 @reboot python /var/www/html/button.py &
 ```
 
+### Donation
+If you like my work and like to keep me motivated you can buy me a coconut water
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/andreasblaesius)
+
 ### Changelog
 - 1.8.1: Small bugfixes and improvements. New Features: enable/disable printing QR-Code, enable/disable photo collage function, enable/disable printing a frame on your picture
 - 1.8.0: Update jQuery, GSAP and PhotoSwipe to latest versions, add chroma keying feature (green screen keying)
