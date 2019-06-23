@@ -162,6 +162,10 @@ sudo crontab -e
 @reboot python /var/www/html/button.py &
 ```
 
+### Donation
+If you like my work and like to keep me motivated you can buy me a coconut water
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/andreasblaesius)
+
 ### Changelog
 - 1.7.0: Add possibillity to choose an image filter before taking a picture
 - 1.6.3: Add config and instructions to use a GPIO Button to take a picture (address https://github.com/andreknieriem/photobooth/issues/10), translate sucess and error messages while sending images via mail
