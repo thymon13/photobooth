@@ -114,6 +114,12 @@ if (file_exists($my_config)) {
 				'placeholder' => 'print',
 				'name' => 'folders[print]',
 				'value' => $config['folders']['print']
+			],
+			'tmp' => [
+				'type' => 'input',
+				'placeholder' => 'tmp',
+				'name' => 'folders[tmp]',
+				'value' => $config['folders']['tmp']
 			]
 		],
 		'wedding' => [
