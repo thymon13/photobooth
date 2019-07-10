@@ -274,6 +274,7 @@ var photoBooth = (function () {
             public.openGallery(target);
         } else {
             if (!processing) {
+                public.closeNav();
                 public.reset();
                 if(useVideo && navigator.mediaDevices){
                     navigator.getMedia = (navigator.mediaDevices.getUserMedia || navigator.mediaDevices.webkitGetUserMedia || navigator.mediaDevices.mozGetUserMedia || false);
@@ -299,6 +300,7 @@ var photoBooth = (function () {
     // Open Gallery Button
     $('#result .gallery, #start .gallery').click(function (e) {
         e.preventDefault();
+        public.closeNav();
         public.openGallery($(this));
     });
 
