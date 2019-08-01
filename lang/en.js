@@ -28,6 +28,7 @@ L10N = {
 	"language": "Choose Language",
 	"dev": "Dev-Mode",
 	"file_format_date": "Use dateformat images",
+	"cups_button": "Show CUPS button",
 	"use_print": "Use Print",
 	"use_qr": "Use QR Codes",
 	"show_gallery": "Show Gallery",

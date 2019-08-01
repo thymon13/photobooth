@@ -89,6 +89,11 @@ if (file_exists($my_config)) {
 				'name' => 'use_filter',
 				'value' => $config['use_filter']
 			],
+			'cups_button' => [
+				'type' => 'checkbox',
+				'name' => 'cups_button',
+				'value' => $config['cups_button']
+			],
 			'previewFromCam' => [
 				'type' => 'checkbox',
 				'name' => 'previewFromCam',
