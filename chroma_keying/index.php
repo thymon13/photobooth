@@ -30,7 +30,7 @@ function navigateToMain() {
 }
 </script>
 </head>
-<body style="background: url(../resources/img/bg.jpg) center center no-repeat;">
+<body style="background: url(../resources/img/bg.jpg) center center no-repeat;background-size: cover;width: 100%;">
 <br>
 <div style="width:90%; margin:0 auto;">
 	<div style="width:600px;height:400px; margin:0 auto;background-color:#000000;border:4px solid black;">
