@@ -281,6 +281,7 @@ if (file_exists($my_config)) {
 		]
 	];
 ?>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8" />
@@ -396,7 +397,7 @@ if (file_exists($my_config)) {
 	</div>
 
 </div>
-<script type="text/javascript" src="/resources/js/jquery.js"></script>
+<script type="text/javascript" src="/resources/js/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="/resources/js/l10n.js"></script>
 <script type="text/javascript" src="/resources/js/admin.js"></script>
 <script type="text/javascript" src="/lang/<?php echo $config['language']; ?>.js"></script>
