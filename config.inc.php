@@ -33,6 +33,7 @@ $config['start_screen_subtitle'] = 'Bitte lächeln!';
 // FOLDERS
 // change the folders to whatever you like
 $config['folders']['images'] = 'images';
+$config['folders']['keying'] = 'keying';
 $config['folders']['tmp'] = 'tmp';
 $config['folders']['thumbs'] = 'thumbs';
 $config['folders']['qrcodes'] = 'qrcodes';

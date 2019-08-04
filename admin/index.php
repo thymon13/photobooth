@@ -89,6 +89,11 @@ if (file_exists($my_config)) {
 				'name' => 'use_filter',
 				'value' => $config['use_filter']
 			],
+			'chroma_keying' => [
+				'type' => 'checkbox',
+				'name' => 'chroma_keying',
+				'value' => $config['chroma_keying']
+			],
 			'cups_button' => [
 				'type' => 'checkbox',
 				'name' => 'cups_button',
@@ -130,6 +135,12 @@ if (file_exists($my_config)) {
 				'placeholder' => 'tmp',
 				'name' => 'folders[tmp]',
 				'value' => $config['folders']['tmp']
+			],
+			'keying' => [
+				'type' => 'input',
+				'placeholder' => 'keying',
+				'name' => 'folders[keying]',
+				'value' => $config['folders']['keying']
 			]
 		],
 		'wedding' => [
