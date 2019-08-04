@@ -15,7 +15,7 @@ $mainimage = '../'.$config['folders']['keying'] . DIRECTORY_SEPARATOR . $filenam
 <head>
 <link rel="stylesheet" href="/resources/css/normalize.css" />
 <link rel="stylesheet" href="/resources/css/default-skin/default-skin.css">
-<link rel="stylesheet" href="/resources/css/style.css" />
+<link rel="stylesheet" href="/resources/css/chromakeying.css" />
 <script type="text/javascript" src="/resources/js/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="/resources/js/marvinj-0.8.js"></script>
 <script type="text/javascript" src="/resources/js/chromakeying.js"></script>
@@ -31,7 +31,7 @@ function navigateToMain() {
 }
 </script>
 </head>
-<body style="background: url(../resources/img/bg.jpg) center center no-repeat;background-size: cover;width: 100%;">
+<body>
 <br>
 <div style="width:90%; margin:0 auto;">
 	<div style="width:600px;height:400px; margin:0 auto;background-color:#000000;border:4px solid black;">
