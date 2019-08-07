@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $my_config = '../my.config.inc.php';
 if (file_exists($my_config)) {
@@ -6,6 +7,26 @@ if (file_exists($my_config)) {
 } else {
 	require_once('../config.inc.php');
 }
+
+// LOGIN
+$username = $config['login_username'];
+$password = $config['login_password'];
+$random1 = $config['login_random1'];
+$hash = md5($random1.$username);
+$error = false;
+
+if (isset($_POST['submit'])) {
+    if (isset($_POST['username']) && $_POST['username'] == $username && isset($_POST['password']) && $_POST['password'] == $password) {
+        //IF USERNAME AND PASSWORD ARE CORRECT SET THE LOG-IN SESSION
+        $_SESSION["login"] = $hash;
+        header("Location: $_SERVER[PHP_SELF]");
+        exit;
+    } else {
+        // DISPLAY FORM WITH ERROR
+        $error = '<p>Username or password is invalid</p>';
+    }
+}
+// END LOGIN
 
 	$configsetup = [
 		'general' => [
@@ -181,6 +202,17 @@ if (file_exists($my_config)) {
 				'name' => 'show_gallery',
 				'value' => $config['show_gallery']
 			],
+			'cookie_required' => [
+				'type' => 'checkbox',
+				'name' => 'cookie_required',
+				'value' => $config['cookie_required']
+			],
+			// Cookie is set on current device?
+			'cookie_isset' => [
+				'type' => 'checkbox',
+				'name' => 'cookie_set_device',
+				'value' => isset($_COOKIE['take_images']) && strpos($_COOKIE['take_images'], md5($config['login_random1'].$config['login_password']) . '--') === 0,
+			],
 			'newest_first' => [
 				'type' => 'checkbox',
 				'name' => 'newest_first',
@@ -202,6 +234,31 @@ if (file_exists($my_config)) {
 				'name' => 'gallery[date_format]',
 				'value' => $config['gallery']['date_format']
 			]
+		],
+		'login' => [
+			'login_enabled' => [
+				'type' => 'checkbox',
+				'name' => 'login_enabled',
+				'value' => $config['login_enabled']
+			],
+			'login_username' => [
+				'type' => 'input',
+				'placeholder' => 'Photo',
+				'name' => 'login_username',
+				'value' => $config['login_username']
+			],
+			'login_password' => [
+				'type' => 'input',
+				'placeholder' => 'booth',
+				'name' => 'login_password',
+				'value' => $config['login_password']
+			],
+			'login_random1' => [
+				'type' => 'input',
+				'placeholder' => 'Q4KbXus?G',
+				'name' => 'login_random1',
+				'value' => $config['login_random1']
+			],
 		],
 		'mail' => [
 			'send_all_later' => [
@@ -321,7 +378,8 @@ if (file_exists($my_config)) {
 <body class="deselect">
 <div id="admin-settings">
 	<div class="admin-panel">
-		<h2><a class="back-to-pb" href="/">Photobooth</a></h2>
+                <h2><a class="back-to-pb" href="/">Photobooth</a></h2>
+                <?php if( !$config['login_enabled'] || (isset($_SESSION['login']) && $_SESSION['login'] == $hash)): ?>
 		<button class="reset-btn">
 			<span class="save">
 				<span data-l10n="reset"></span>
@@ -405,6 +463,18 @@ if (file_exists($my_config)) {
 				</span>
 			</button>
 		</div>
+                <?php else: ?>
+                <form method='post' class="login">
+                    <label for="username">username</label>
+                    <input type="text" name="username" id="username">
+                    <label for="password">password</label>
+                    <input type="password" name="password" id="password">
+                    <input type="submit" name="submit" value="submit">
+                    <?php if ($error !== false) {
+                        echo $error;
+                    } ?>
+                </form>
+                <?php endif; ?>
 	</div>
 
 </div>
