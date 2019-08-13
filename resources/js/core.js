@@ -164,6 +164,9 @@ var photoBooth = (function () {
             $.ajax({
                 url: 'print.php?filename=' + encodeURI(result.img),
             }).done(function (data) {
+                setTimeout(function () {
+                    $('.loading').text(L10N.printing);
+                }, 1100);
             })
         });
 
@@ -371,6 +374,9 @@ var photoBooth = (function () {
         $.ajax({
             url: 'print.php?filename=' + encodeURI(img),
         }).done(function (data) {
+            setTimeout(function () {
+                $('.loading').text(L10N.printing);
+            }, 1100);
         })
     });
 
