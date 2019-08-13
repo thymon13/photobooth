@@ -164,9 +164,14 @@ var photoBooth = (function () {
             $.ajax({
                 url: 'print.php?filename=' + encodeURI(result.img),
             }).done(function (data) {
-                setTimeout(function () {
-                    $('.loading').text(L10N.printing);
-                }, 1100);
+                swal({
+                    customClass: 'myPrintConfirmation',
+                    type: 'success',
+                    title: 'Druckauftrag gestartet',
+                    showConfirmButton: false,
+                    timer: 1600,
+                    allowOutsideClick: false
+                })
             })
         });
 
@@ -374,9 +379,14 @@ var photoBooth = (function () {
         $.ajax({
             url: 'print.php?filename=' + encodeURI(img),
         }).done(function (data) {
-            setTimeout(function () {
-                $('.loading').text(L10N.printing);
-            }, 1100);
+            swal({
+                customClass: 'myPrintConfirmation',
+                type: 'success',
+                title: 'Druckauftrag gestartet',
+                showConfirmButton: false,
+                timer: 1600,
+                allowOutsideClick: false
+            })
         })
     });
 

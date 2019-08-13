@@ -838,6 +838,15 @@ hr.small {
   margin-left: -125px;
 }
 
+.swal2-container {
+  z-index: 20000;
+  -webkit-overflow-scrolling: auto
+}
+
+.myPrintConfirmation .swal2-icon {
+  border-color: orange;
+}
+
 @media (max-width: 767px) {
   /* line 672, ../sass/style.scss */
   .takePic {
