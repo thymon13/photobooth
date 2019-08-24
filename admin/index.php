@@ -94,6 +94,11 @@ if (file_exists($my_config)) {
 				'name' => 'chroma_keying',
 				'value' => $config['chroma_keying']
 			],
+			'use_collage' => [
+				'type' => 'checkbox',
+				'name' => 'use_collage',
+				'value' => $config['use_collage']
+			],
 			'cups_button' => [
 				'type' => 'checkbox',
 				'name' => 'cups_button',
