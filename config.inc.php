@@ -26,7 +26,7 @@ $config['chroma_keying'] = true;
 $config['use_collage'] = false;
 
 // LANGUAGE
-// possible values: en, de, fr
+// possible values: en, de, fr, es
 $config['language'] = 'de';
 
 // StartScreen
